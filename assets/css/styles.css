@@ -113,7 +113,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1220px auto;
+  max-width: 1220px;
   margin-inline: 1.5rem;
 }
 
@@ -596,6 +596,10 @@ img {
 
 .new__stars {
   color: var(--first-color);
+}
+
+.new__swiper:nth-child(1){
+  margin-bottom: 2rem;
 }
 
 /*=============== JOIN ===============*/
