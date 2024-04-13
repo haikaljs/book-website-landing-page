@@ -38,8 +38,44 @@ if (loginClose) {
 }
 
 /*=============== ADD SHADOW HEADER ===============*/
+const shadowHeader = () => {
+  const header = document.getElementById("header");
+  // Add a class if the bottom offset is greater than 50 of the viewport
+  this.scrollY >= 50
+    ? header.classList.add("shadow-header")
+    : header.classList.remove("shadow-header");
+};
+window.addEventListener("scroll", shadowHeader);
+
+/*=============== TESTIMONIAL SWIPER ===============*/
+let testimonialSwiper = new Swiper(".testimonial-swiper", {
+  spaceBetween: 30,
+  loop: "true",
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 /*=============== HOME SWIPER ===============*/
+const swiperHome = new Swiper(".home__swiper", {
+  loop: true,
+  spaceBetween: -24,
+  grabCursor: true,
+  slidesPerView: "auto",
+  centeredSlides: "auto",
+
+  autoPlay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1220: {
+      spaceBetween: -32,
+    },
+  },
+});
 
 /*=============== FEATURED SWIPER ===============*/
 
