@@ -59,14 +59,14 @@ let testimonialSwiper = new Swiper(".testimonial-swiper", {
 });
 
 /*=============== HOME SWIPER ===============*/
-const swiperHome = new Swiper(".home__swiper", {
+let swiperHome = new Swiper(".home__swiper", {
   loop: true,
   spaceBetween: -24,
   grabCursor: true,
   slidesPerView: "auto",
   centeredSlides: "auto",
 
-  autoPlay: {
+  autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
