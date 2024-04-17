@@ -105,7 +105,7 @@ let swiperNew = new Swiper(".new__swiper", {
 /*=============== TESTIMONIAL SWIPER ===============*/
 
 let swiperTestimonial = new Swiper(".testimonial__swipper", {
-  loop: false,
+  loop: true,
   spaceBetween: 16,
   grabCursor: true,
   slidesPerView: "auto",
