@@ -47,17 +47,6 @@ const shadowHeader = () => {
 };
 window.addEventListener("scroll", shadowHeader);
 
-/*=============== TESTIMONIAL SWIPER ===============*/
-let testimonialSwiper = new Swiper(".testimonial-swiper", {
-  spaceBetween: 30,
-  loop: "true",
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
 /*=============== HOME SWIPER ===============*/
 let swiperHome = new Swiper(".home__swiper", {
   loop: true,
@@ -116,7 +105,7 @@ let swiperNew = new Swiper(".new__swiper", {
 /*=============== TESTIMONIAL SWIPER ===============*/
 
 let swiperTestimonial = new Swiper(".testimonial__swipper", {
-  loop: true,
+  loop: false,
   spaceBetween: 16,
   grabCursor: true,
   slidesPerView: "auto",
@@ -124,7 +113,7 @@ let swiperTestimonial = new Swiper(".testimonial__swipper", {
 
   breakpoints: {
     1150: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       centeredSlides: false,
     },
   },
@@ -200,3 +189,18 @@ themeButton.addEventListener("click", () => {
 });
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  // reset: true, //animations repeat
+});
+
+sr.reveal(
+  `.home__data, .featured__container, .new__container, .join__data, .testimonial__container, .footer`
+);
+sr.reveal(`.home__images`, { delay: 600 });
+sr.reveal(`.services__card`, { interval: 100 });
+sr.reveal(`.discount__data`, { origin: "left" });
+sr.reveal(`.discount__images`, { origin: "right" });
